@@ -1,0 +1,4 @@
+train: /content/dogs-cats-images/dataset/training_set
+val: /content/dogs-cats-images/dataset/test_set
+nc: 2
+names: ['cat', 'dog']
