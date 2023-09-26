@@ -1,6 +1,6 @@
 <h1>How to run this repository<h1>
   <h2>For training</h2>
-  <h3>+Step1: Go to data/ folder then create another file .yaml like dog_cat.yaml</h3>
+  <h3>+Step1: Go to "data" folder then create another file .yaml like dog_cat.yaml</h3>
   <h3>+Step2: Open CMD, terminal, anaconda prompt</h3>
   <h3>+Step3: Clone this repository<h3>
   <pre>git clone https://github.com/LuongTuanAnh163002/Resnet_AnhLT.git</pre>
