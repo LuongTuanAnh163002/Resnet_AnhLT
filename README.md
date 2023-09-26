@@ -1,6 +1,7 @@
 <h1>How to run this repository<h1>
   <h3>For training</h3>
   <p>+Step0: Dowload data you need to classification, the struct of folder contain data to classification like this</p>
+  <img src = "image.png"></img>
   <p>+Step1: Go to "data" folder then create another file .yaml like dog_cat.yaml</p>
   <p>+Step2: Open CMD, terminal, anaconda prompt</p>
   <p>+Step3: Clone this repository<p>
