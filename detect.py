@@ -98,7 +98,7 @@ def detect(opt):
     ax.set_title('pred:{}, score:{}'.format(label_dict[index_val[0]], value[0]))
     path_to_save = os.path.join(save_dir, file_name)
     plt.savefig(path_to_save)
-    print(img_out)  
+     
   elif isdir:
     print("Predicting image in folder")
     model.eval()
@@ -119,7 +119,6 @@ def detect(opt):
       path_to_save_batch = os.path.join(save_dir, file_name_batch)
       plt.savefig(path_to_save_batch)
       cnt += 1
-      print(img_out)
   print(f"Results saved to {save_dir}")
   print(f'Done. ({time.time() - t0:.3f}s)')
 

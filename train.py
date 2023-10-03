@@ -324,6 +324,8 @@ def train(opt, tb_writer):
       print(pf % (round(epoch_loss,3), round(epoch_score,3)))
       # print("Validation loss: {}, accuracy: {}".format(epoch_loss,epoch_score))
   #--------------------------end epoch------------------------------------------------
+
+  #--------------------------save precision, recall, f1------------------------------
   print('%g epochs completed in %.3f hours.\n' % (epochs, (time.time() - t0) / 3600))
   pr, rc, f1 = compute_f1_pr_rc(model, testloader, device, metric_val)
   plt.bar([0, 1, 2], [pr, rc, f1], color=["green", "blue", "black"])
@@ -332,6 +334,7 @@ def train(opt, tb_writer):
   print("Precision score:", pr)
   print("Recall score:", rc)
   print("F1 score:", f1)
+  #--------------------------save precision, recall, f1------------------------------
   
   #-------------------------save confusion_matrix-------------------------------------
   confusion_mat = ConfusionMatrix(nc, model, device, testloader)
