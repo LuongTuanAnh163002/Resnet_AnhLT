@@ -1,4 +1,5 @@
-<h1>How to run this repository<h1>
+<h1>Train Resnet with Custom dataset</h1>
+<h2>How to run this repository<h2>
   <h3>For training</h3>
   <p>+Step0: Dowload data you need to classification, the struct of folder contain data to classification like this</p>
   <img src = "image.png"></img>
