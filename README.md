@@ -23,4 +23,4 @@
   <pre>python detect.py --source file_name.jpg --weights ../runs/train/../weights/__.pth --device 0</pre>
   <p>+Detect for folder</p>
   <pre>python detect.py --source path_folder --weights ../runs/train/../weights/__.pth --device 0</pre>
-[Open with Google Colab](https://colab.research.google.com/github/LuongTuanAnh163002/Resnet_AnhLT/blob/main/Train_Retnet_Example.ipynb)
+<a href="https://colab.research.google.com/drive/1dpMrjgJs3qKxaKR833RJDyZTh2O1-Wyn?usp=sharing#forceEdit=true&amp;sandboxMode=true" rel="nofollow"><img src="https://camo.githubusercontent.com/84f0493939e0c4de4e6dbe113251b4bfb5353e57134ffd9fcab6b8714514d4d1/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667" alt="Open In Colab" data-canonical-src="https://colab.research.google.com/assets/colab-badge.svg" style="max-width: 100%;"></a>
