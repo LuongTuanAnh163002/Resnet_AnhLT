@@ -6,7 +6,7 @@
   <p>+Step2: Open CMD, terminal, anaconda prompt</p>
   <p>+Step3: Clone this repository<p>
   <pre>git clone https://github.com/LuongTuanAnh163002/Resnet_AnhLT.git</pre>
-  <p>+Step4: Move to the Web_Sign_Language_Detection folder</p>
+  <p>+Step4: Move to the Resnet_AnhLT folder</p>
   <pre>cd Resnet_AnhLT</pre>
   <p>+Step5: Install all packges need</p>
   <pre>pip install -r requirements.txt</pre>
@@ -23,3 +23,4 @@
   <pre>python detect.py --source file_name.jpg --weights ../runs/train/../weights/__.pth --device 0</pre>
   <p>+Detect for folder</p>
   <pre>python detect.py --source path_folder --weights ../runs/train/../weights/__.pth --device 0</pre>
+[Open with Google Colab](https://colab.research.google.com/github/LuongTuanAnh163002/Resnet_AnhLT/blob/main/Train_Retnet_Example.ipynb)
