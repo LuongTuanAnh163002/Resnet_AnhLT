@@ -18,7 +18,7 @@
       <a href="#data-preparation">Data Preparation</a>
     </li>
     <li><a href="#custom-dataset">How to run repository with custom dataset</a></li>
-    <li><a href=#colab>Try with example in google colab</a></li>
+    <li><a href="#colab">Try with example in google colab</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
