@@ -32,19 +32,19 @@
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto">
   <pre>Resnet_AnhLT
   │   train.py                      <span class="pl-c"><span class="pl-c">#</span> Train script</span>
-  │   val.py                        <span class="pl-c"><span class="pl-c">#</span> Validate script</span>
+  │   detect.py                     <span class="pl-c"><span class="pl-c">#</span> Detect script inference</span>
   
   ├───model
-  │       model_fc.py             <span class="pl-c"><span class="pl-c">#</span>Transfer RESNET with custom dataset</span>
-  │       resnet.py                <span class="pl-c"><span class="pl-c">#</span> RESNET architecture</span>
+  │       model_fc.py               <span class="pl-c"><span class="pl-c">#</span>Transfer RESNET with custom dataset</span>
+  │       resnet.py                 <span class="pl-c"><span class="pl-c">#</span> RESNET architecture</span>
   │
   ├───data
-  │       dog_cat.yaml               <span class="pl-c"><span class="pl-c">#</span>Config data dog_cat example</span>
+  │       dog_cat.yaml              <span class="pl-c"><span class="pl-c">#</span>Config data dog_cat example</span>
   │
   └───utils
-      │   datasets.py                   <span class="pl-c"><span class="pl-c">#</span>Processing datasets</span>
-      │   metrics.py            <span class="pl-c"><span class="pl-c">#</span> Compute metrics</span>
-      │   generals.py                  <span class="pl-c"><span class="pl-c">#</span> Various helper functions</span>
+      │   datasets.py               <span class="pl-c"><span class="pl-c">#</span>Processing datasets</span>
+      │   metrics.py                <span class="pl-c"><span class="pl-c">#</span> Compute metrics</span>
+      │   generals.py               <span class="pl-c"><span class="pl-c">#</span> Various helper functions</span>
   </pre>
 </div>
 
