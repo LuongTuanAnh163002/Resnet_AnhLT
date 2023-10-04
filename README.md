@@ -28,48 +28,76 @@
 <p dir="auto">In this project we will build RESNET from scratch and training with all CUSTOM dataset</p>
 
 <h2 tabindex="-1" id="user-content-about-the-project" dir="auto"><a class="heading-link" href="#project-structure">Project Structure<svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></h2>
-<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto">
-  <pre>Resnet_AnhLT
-  │   train.py                      <span class="pl-c"><span class="pl-c">#</span> Train script</span>
-  │   detect.py                        <span class="pl-c"><span class="pl-c">#</span> Detect script inference</span>
-  │
-  ├───model
-  │       model_fc.py             <span class="pl-c"><span class="pl-c">#</span> Transfer model RESNET with custom dataset</span>
-  │       resnet.py                <span class="pl-c"><span class="pl-c">#</span> RESNET architecture</span>
-  │
-  ├───data
-  │       dog_cat.yaml               <span class="pl-c"><span class="pl-c">#</span> Config of data dog cat classification example</span>
-  │
-  └───utils
-      │   datasets.py                   <span class="pl-c"><span class="pl-c">#</span>Processing Dataset</span>
-      │   generals.py            <span class="pl-c"><span class="pl-c">#</span>Support function
-      │   metrics.py                  <span class="pl-c"><span class="pl-c">#</span>Compute metrics</span>
-  </pre>
-  <div class="zeroclipboard-container position-absolute right-0 top-0">
-      <clipboard-copy aria-label="Copy" class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay" data-copy-feedback="Copied!" data-tooltip-direction="w" value="Resnet_AnhLT
-  │   train.py                      # Train script
-  |   detect.py                     # Detect script inference
-        
-  ├───model
-  │       model_fc.py             # Transfer model RESNET with custom dataset
-  │       resnet.py               #  RESNET architecture
-  │
-  ├───data
-  │       dog_cat.yaml            # Config of data dog cat classification example
-  │
-  └───utils
-      |   datasets.py             # Processing Dataset
-      │   generals.py             # Draw bounding box
-      │   metrics.py              # Compute metrics>            
-        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon m-2">
-      <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-  </svg>
-        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none m-2">
-      <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-  </svg>
-      </clipboard-copy>
-    </div>
-</div>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>HybridNets
+│   backbone.py                   <span class="pl-c"><span class="pl-c">#</span> Model configuration</span>
+<span class="pl-k">|</span>   export.py                     <span class="pl-c"><span class="pl-c">#</span> UPDATED 10/2022: onnx weight with accompanying .npy anchors</span>
+│   hubconf.py                    <span class="pl-c"><span class="pl-c">#</span> Pytorch Hub entrypoint</span>
+│   hybridnets_test.py            <span class="pl-c"><span class="pl-c">#</span> Image inference</span>
+│   hybridnets_test_videos.py     <span class="pl-c"><span class="pl-c">#</span> Video inference</span>
+│   train.py                      <span class="pl-c"><span class="pl-c">#</span> Train script</span>
+│   train_ddp.py                  <span class="pl-c"><span class="pl-c">#</span> DistributedDataParallel training (Multi GPUs)</span>
+│   val.py                        <span class="pl-c"><span class="pl-c">#</span> Validate script</span>
+│   val_ddp.py                    <span class="pl-c"><span class="pl-c">#</span> DistributedDataParralel validating (Multi GPUs)</span>
+│
+├───encoders                      <span class="pl-c"><span class="pl-c">#</span> https://github.com/qubvel/segmentation_models.pytorch/tree/master/segmentation_models_pytorch/encoders</span>
+│       ...
+│
+├───hybridnets
+│       autoanchor.py             <span class="pl-c"><span class="pl-c">#</span> Generate new anchors by k-means</span>
+│       dataset.py                <span class="pl-c"><span class="pl-c">#</span> BDD100K dataset</span>
+│       loss.py                   <span class="pl-c"><span class="pl-c">#</span> Focal, tversky (dice)</span>
+│       model.py                  <span class="pl-c"><span class="pl-c">#</span> Model blocks</span>
+│
+├───projects
+│       bdd100k.yml               <span class="pl-c"><span class="pl-c">#</span> Project configuration</span>
+│
+├───ros                           <span class="pl-c"><span class="pl-c">#</span> C++ ROS Package for path planning</span>
+│       ...
+│
+└───utils
+    <span class="pl-k">|</span>   constants.py
+    │   plot.py                   <span class="pl-c"><span class="pl-c">#</span> Draw bounding box</span>
+    │   smp_metrics.py            <span class="pl-c"><span class="pl-c">#</span> https://github.com/qubvel/segmentation_models.pytorch/blob/master/segmentation_models_pytorch/metrics/functional.py</span>
+    │   utils.py                  <span class="pl-c"><span class="pl-c">#</span> Various helper functions (preprocess, postprocess, eval...)</span></pre><div class="zeroclipboard-container position-absolute right-0 top-0">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay" data-copy-feedback="Copied!" data-tooltip-direction="w" value="HybridNets
+│   backbone.py                   # Model configuration
+|   export.py                     # UPDATED 10/2022: onnx weight with accompanying .npy anchors
+│   hubconf.py                    # Pytorch Hub entrypoint
+│   hybridnets_test.py            # Image inference
+│   hybridnets_test_videos.py     # Video inference
+│   train.py                      # Train script
+│   train_ddp.py                  # DistributedDataParallel training (Multi GPUs)
+│   val.py                        # Validate script
+│   val_ddp.py                    # DistributedDataParralel validating (Multi GPUs)
+│
+├───encoders                      # https://github.com/qubvel/segmentation_models.pytorch/tree/master/segmentation_models_pytorch/encoders
+│       ...
+│
+├───hybridnets
+│       autoanchor.py             # Generate new anchors by k-means
+│       dataset.py                # BDD100K dataset
+│       loss.py                   # Focal, tversky (dice)
+│       model.py                  # Model blocks
+│
+├───projects
+│       bdd100k.yml               # Project configuration
+│
+├───ros                           # C++ ROS Package for path planning
+│       ...
+│
+└───utils
+    |   constants.py
+    │   plot.py                   # Draw bounding box
+    │   smp_metrics.py            # https://github.com/qubvel/segmentation_models.pytorch/blob/master/segmentation_models_pytorch/metrics/functional.py
+    │   utils.py                  # Various helper functions (preprocess, postprocess, eval...)" tabindex="0" role="button" style="display: inherit;">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon m-2">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success m-2 d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
 <h2>I.How to run this repository<h2>
   <h3>1.For training</h3>
   <p>+Step0: Dowload data you need to classification, the struct of folder contain data to classification like this</p>
