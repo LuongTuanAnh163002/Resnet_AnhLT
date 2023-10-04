@@ -1,4 +1,4 @@
-<h1>Train Resnet with Custom dataset</h1>
+<h1>RESNET: Build from scratch, Train Resnet with Custom dataset</h1>
 <h2>I.How to run this repository<h2>
   <h3>1.For training</h3>
   <p>+Step0: Dowload data you need to classification, the struct of folder contain data to classification like this</p>
