@@ -4,6 +4,24 @@
 <a href="https://www.python.org/downloads/" rel="nofollow"><img src="https://camo.githubusercontent.com/9563a47966e5e5d773f6221b3dbd3dc8c103c4001d80b4f05ca0beab94303f07/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f505954484f4e2d332e372b2d7265643f7374796c653d666f722d7468652d6261646765266c6f676f3d707974686f6e266c6f676f436f6c6f723d7768697465" alt="Python - Version" data-canonical-src="https://img.shields.io/badge/PYTHON-3.7+-red?style=for-the-badge&amp;logo=python&amp;logoColor=white" style="max-width: 100%;"></a>
 <br></p>
 </div>
+
+<details open="">
+  <summary>Table of Contents</summary>
+  <ol dir="auto">
+    <li>
+      <a href="#about-the-project">About The Project</a>
+    </li>
+    <li>
+      <a href="#getting-started">Project Structure</a>
+    </li>
+    <li>
+      <a href="#usage">Data Preparation</a>
+    </li>
+    <li><a href="#training-tips">How to run repository with custom dataset</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
 <h2>I.How to run this repository<h2>
   <h3>1.For training</h3>
   <p>+Step0: Dowload data you need to classification, the struct of folder contain data to classification like this</p>
