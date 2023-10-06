@@ -4,6 +4,7 @@ import argparse
 from pathlib import Path
 from model.resnet import resnet18, resnet34, resnet50, resnet101, resnet152
 from model.model_fc import Dc_model
+import onnx
 
 def export(opt):
   weights, device_number, imgsz = opt.weights, opt.device, opt.imgsz
