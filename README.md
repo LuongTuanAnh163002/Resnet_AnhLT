@@ -78,18 +78,24 @@
   <p>+Step5: Install all packges need</p>
   <pre>pip install -r requirements.txt</pre>
   <p>+Step6: Run the code below to training for pretrain</p>
-  <pre>python train.py --model_type [resnet18, resnet34, resnet50, resnet101, resnet152] --pretrained --freeze --data file_name.yaml --epochs 50 --device 0</pre>
+  <pre>python train.py --model_type [resnet18, resnet34, resnet50, resnet101, resnet152] --pretrained --freeze --data file_name.yaml --epochs 50 --device [0, 1, 2,..]</pre>
   <p>+Step7: Run the code below to training for weight initialize</p>
-  <pre>python train.py --model_type [resnet18, resnet34, resnet50, resnet101, resnet152] --data file_name.yaml --epochs 50 --device 0</pre>
+  <pre>python train.py --model_type [resnet18, resnet34, resnet50, resnet101, resnet152] --data file_name.yaml --epochs 50 --device [0, 1, 2,..]</pre>
   <p>+Step8: Run the code below to training for using weight from previous train</p>
-  <pre>python train.py --model_type [resnet18, resnet34, resnet50, resnet101, resnet152] --weight_init [file_name.pt, file_name.pth] --data file_name.yaml --epochs 50 --device 0</pre>
+  <pre>python train.py --model_type [resnet18, resnet34, resnet50, resnet101, resnet152] --weight_init [file_name.pt, file_name.pth] --data file_name.yaml --epochs 50 --device [0, 1, 2,..]</pre>
   <p>After you run and done training, all results save in runs/train/exp/..., folder runs automatic create after training done:</p>
 
   <h3>2.For detect</h3>
   <p>+Detect for file</p>
-  <pre>python detect.py --source file_name.jpg --weights ../runs/train/../weights/__.pth --device 0</pre>
+  <pre>python detect.py --source file_name.jpg --weights ../runs/train/../weights/__.pth --device [0, 1, 2,..]</pre>
   <p>+Detect for folder</p>
-  <pre>python detect.py --source path_folder --weights ../runs/train/../weights/__.pth --device 0</pre>
+  <pre>python detect.py --source path_folder --weights ../runs/train/../weights/__.pth --device [0, 1, 2,..]</pre>
+
+  <h3>3.For export</h3>
+  <pre>python export.py --weights ../runs/train/../weights/__.pth --device [0, 1, 2,..]</pre>
+
+  <h3>4.Launch tensorboard</h3>
+  <pre>tensorboard --logdir ../runs/train/name_project --bind_all --port=2002</pre>
 
 <h2 tabindex="-1" id="user-content-about-the-project" dir="auto"><a class="heading-link" href="#colab">Try with example in google colab<svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></h2>
 <a href="https://colab.research.google.com/drive/12FKf4q1szLpT-tTUpl8mslSj9g6BhlYW?usp=sharing" rel="nofollow"><img src="https://camo.githubusercontent.com/84f0493939e0c4de4e6dbe113251b4bfb5353e57134ffd9fcab6b8714514d4d1/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667" alt="Open In Colab" data-canonical-src="https://colab.research.google.com/assets/colab-badge.svg" style="max-width: 100%;"></a>
