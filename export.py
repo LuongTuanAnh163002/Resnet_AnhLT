@@ -53,7 +53,7 @@ def export(opt):
     model.load_state_dict(dict_weight['model_state_dict'])
   
   model.eval()
-  inputs = torch.randn(1, 3, imgsz, imgsz)
+  inputs = torch.randn(1, 3, imgsz, imgsz).to(device)
   print("begin to convert onnx")
   
   torch.onnx.export(model,
