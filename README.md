@@ -70,20 +70,25 @@
 <h2 tabindex="-1" id="user-content-about-the-project" dir="auto"><a class="heading-link" href="#custom-dataset">How to run repository with custom dataset<svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></h2>
   <h3>1.For training</h3>
   <p>+Step0: Dowload data you need to classification, the struct of folder contain data to classification like data preparation part</p>
-  <p>+Step1: Open CMD, terminal, anaconda prompt</p>
-  <p>+Step2: Clone this repository<p>
-  <pre>git clone https://github.com/LuongTuanAnh163002/Resnet_AnhLT.git</pre>
-  <p>+Step3: Move to the Resnet_AnhLT folder</p>
-  <pre>cd Resnet_AnhLT</pre>
+  <p>+Step1: Open anaconda prompt and install virtual environment and all package</p>
+  <pre>
+  conda create --name resnet python=3.10.12
+  git clone https://github.com/LuongTuanAnh163002/Resnet_AnhLT.git
+  cd Resnet_AnhLT
+  conda activate resnet
+  pip install -r requirements.txt
+  </pre>
+  
   <p>+Step4: Go to "data" folder then create another file .yaml like dog_cat.yaml</p>
-  <p>+Step5: Install all packges need</p>
-  <pre>pip install -r requirements.txt</pre>
-  <p>+Step6: Run the code below to training for pretrain</p>
-  <pre>python train.py --model_type [resnet18, resnet34, resnet50, resnet101, resnet152] --pretrained --freeze --data file_name.yaml --epochs 50 --device [0, 1, 2,..]</pre>
-  <p>+Step7: Run the code below to training for weight initialize</p>
-  <pre>python train.py --model_type [resnet18, resnet34, resnet50, resnet101, resnet152] --data file_name.yaml --epochs 50 --device [0, 1, 2,..]</pre>
-  <p>+Step8: Run the code below to training for using weight from previous train</p>
-  <pre>python train.py --model_type [resnet18, resnet34, resnet50, resnet101, resnet152] --weight_init [file_name.pt, file_name.pth] --data file_name.yaml --epochs 50 --device [0, 1, 2,..]</pre>
+  <p>+Step6: Run the code below to training</p>
+  <pre>
+  #for pretrain
+  python train.py --model_type [resnet18, resnet34, resnet50, resnet101, resnet152] --pretrained --freeze --data file_name.yaml --epochs 50 --device [0, 1, 2,..]
+  #for weight initialize
+  python train.py --model_type [resnet18, resnet34, resnet50, resnet101, resnet152] --data file_name.yaml --epochs 50 --device [0, 1, 2,..]
+  #for using weight from previous train
+  python train.py --model_type [resnet18, resnet34, resnet50, resnet101, resnet152] --weight_init [file_name.pt, file_name.pth] --data file_name.yaml --epochs 50 --device [0, 1, 2,..]
+  </pre>
   <p>After you run and done training, all results save in runs/train/exp/..., folder runs automatic create after training done:</p>
 
   <h3>2.For detect</h3>
