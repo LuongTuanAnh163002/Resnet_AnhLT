@@ -92,10 +92,12 @@
   <p>After you run and done training, all results save in runs/train/exp/..., folder runs automatic create after training done:</p>
 
   <h3>2.For detect</h3>
-  <p>+Detect for file</p>
-  <pre>python detect.py --source file_name.jpg --weights ../runs/train/../weights/__.pth --device [0, 1, 2,..]</pre>
-  <p>+Detect for folder</p>
-  <pre>python detect.py --source path_folder --weights ../runs/train/../weights/__.pth --device [0, 1, 2,..]</pre>
+  <pre>
+  #for file
+  python detect.py --source file_name.jpg --weights ../runs/train/../weights/__.pth --device [0, 1, 2,..]
+  #for folder
+  python detect.py --source path_folder --weights ../runs/train/../weights/__.pth --device [0, 1, 2,..]
+  </pre>
 
   <h3>3.For export</h3>
   <pre>python export.py --weights ../runs/train/../weights/__.pth --device [0, 1, 2,..]</pre>
